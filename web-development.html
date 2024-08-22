@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karmadev</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://crowdytheme.com/html/assets/imgs/logo/favicon.webp"
+    />
+
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/progressbar.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/master-marketing.css" />
+    <link rel="stylesheet" href="assets/css/master-crm.css" />
+    <link rel="stylesheet" href="assets/css/master-ai-image-generator.css">
+    <link rel="stylesheet" href="assets/css/master-online-meeting.css">
+    <link rel="stylesheet" href="assets/css/master-ai-content-writer.css">
+
+   <style type="text/css">
+    .header__logo img{
+  width:170px;
+}
+.accordion-body ul {
+  list-style-type: disc; /* Adds bullet points */
+  margin-left: 20px; /* Adds some indentation */
+}
+
+.accordion-body ul ul {
+  list-style-type: circle; /* Adds hollow bullet points for nested lists */
+  margin-left: 20px;
+}
+
+.accordion-body li {
+  margin-bottom: 8px; /* Adds space between list items */
+}
+
+.accordion-body li span {
+  font-weight: bold; /* Makes the span content bold */
+}
+
+.cta-area {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.section-title-wrapper {
+  margin-bottom: 20px;
+}
+
+.subtitle-wrapper {
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #00c48c;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: #e0f7ef;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #0d1829;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.text-wrapper {
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 16px;
+  color: #6b7c93;
+  margin-bottom: 30px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wc-btn {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+.wc-btn-primary {
+  background-color: #00c48c;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.wc-btn-primary.primary-bg {
+  background-color: #00121c; /* Dark background for the second button */
+  color: #ffffff;
+}
+
+.wc-btn-primary:hover {
+  background-color: #00a77f;
+}
+
+.wc-btn-primary.primary-bg:hover {
+  background-color: #00212c; /* Darker hover effect */
+}
+
+
+.contact-block {
+    overflow: hidden
+}
+
+.contact-block__grid {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative
+}
+
+.contact-block__grid-separator {
+    background-color: #fff;
+    border-radius: 25px;
+    color: #0e0f11;
+    left: 50%;
+    padding: 5px 23px;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%,-50%)
+}
+
+@media(min-width: 1024px) {
+    .contact-block__grid-separator {
+        top:50%
+    }
+}
+
+.contact-block__item {
+    background-color: #bff0ff;
+    flex: 0 0 auto;
+    padding: 45px 16px;
+    width: 100%
+}
+
+@media(min-width: 1024px) {
+    .contact-block__item:nth-child(2n) {
+        padding-left:25px
+    }
+
+    .contact-block__item:nth-child(2n) .contact-block__item-inner {
+        margin-right: 0
+    }
+
+    .contact-block__item:nth-child(odd) {
+        padding-right: 25px
+    }
+
+    .contact-block__item:nth-child(odd) .contact-block__item-inner {
+        margin-left: 0
+    }
+
+    .contact-block__item {
+        padding: 75px 100px;
+        width: 50%
+    }
+}
+
+.contact-block__item-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 430px
+}
+
+.contact-block__item--meeting {
+    background-color: #00c2ff;
+    color: #fff;
+    padding-bottom: 80px;
+    position: relative
+}
+
+@media(min-width: 1024px) {
+    .contact-block__item--meeting {
+        order:1;
+        position: static
+    }
+}
+
+.contact-block__wysiwyg {
+    margin-bottom: 65px
+}
+
+.meeting-title {
+    margin: 0 0 25px
+}
+
+.meeting-info {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    margin-bottom: 15px;
+    padding-left: 30px
+}
+
+.meeting-info--phone {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMjEuMDYxIDE1Ljg4NnYzLjEyNWMuMDAxLjI5LS4wNTguNTc3LS4xNzQuODQzcy0uMjg3LjUwNC0uNS43LS40NjYuMzQ2LS43NDEuNDM4YTIuMDggMi4wOCAwIDAgMS0uODU1LjEwMSAyMC42MSAyMC42MSAwIDAgMS04Ljk5LTMuMTk4IDIwLjMxIDIwLjMxIDAgMCAxLTYuMjUtNi4yNUMxLjc5IDguOTI4LjY5NCA1LjgzNC4zNTIgMi42MTVjLS4wMjYtLjI4OC4wMDgtLjU3OC4xMDEtLjg1MnMuMjQxLS41MjYuNDM2LS43NC40MzItLjM4NC42OTctLjUwMS41NTEtLjE3Ny44NC0uMTc4SDUuNTVjLjUwNi0uMDA1Ljk5Ni4xNzQgMS4zNzkuNTA0cy42MzQuNzg3LjcwNCAxLjI4OGMuMTMyIDEgLjM3NyAxLjk4Mi43MjkgMi45MjcuMTQuMzczLjE3Ljc3OC4wODcgMS4xNjhzLS4yNzYuNzQ3LS41NTYgMS4wM0w2LjU3MSA4LjU4M2MxLjQ4MyAyLjYwOCAzLjY0MiA0Ljc2NyA2LjI1IDYuMjVsMS4zMjMtMS4zMjNjLjI4My0uMjguNjQxLS40NzMgMS4wMy0uNTU2cy43OTUtLjA1MyAxLjE2OC4wODdhMTMuMzggMTMuMzggMCAwIDAgMi45MjcuNzI5Yy41MDYuMDcxLjk2OC4zMjYgMS4yOTguNzE2cy41MDYuODg4LjQ5MyAxLjM5OHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4K)
+}
+
+.meeting-info--email {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjAyMSAwaDE4Ljk1N2MuMzEyIDAgLjYwMy4wNzcuODY2LjIwM2wtOC45MTUgOC44N2EyLjAyMyAyLjAyMyAwIDAgMS0yLjg1OCAwTDEuMTU1LjIwM0MxLjQyLjA3NyAxLjcxIDAgMi4wMjEgMFptMTMuOCA4LjA4NiA2Ljk3Ni02LjkzYy4xMjYuMjYzLjIwMy41NTQuMjAzLjg2NXYxMi4xM2MwIC4zMS0uMDc3LjYwMi0uMjAzLjg2NWwtNi45NzUtNi45M1pNLjIwNCAxLjE1NkExLjk5OCAxLjk5OCAwIDAgMCAwIDIuMDJ2MTIuMTNjMCAuMzEuMDc3LjYwMi4yMDMuODY1bDYuOTc1LTYuOTMtNi45NzUtNi45M1ptMTMuNjc5IDguODcuOTg3LS45ODcgNi45NzYgNi45M2ExLjk5OCAxLjk5OCAwIDAgMS0uODY2LjIwM0gyLjAyYy0uMzEgMC0uNjAyLS4wNzctLjg2Ni0uMjAzbDYuOTc2LTYuOTMuOTg3Ljk4N2EzLjM3MyAzLjM3MyAwIDAgMCA0Ljc2NCAwWiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPgo=)
+}
+
+.meeting-info--zoom {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIxIiBoZWlnaHQ9IjExIiBmaWxsPSJub25lIj48cGF0aCBkPSJNLjA2Ni44MTlWNy44NGMuMDA2IDEuNTg4IDEuNDE4IDIuODY1IDMuMTQgMi44NTloMTEuMTM5Yy4zMTYgMCAuNTcyLS4yMzQuNTcyLS41MTlWMy4xNTljLS4wMDgtMS41ODYtMS40Mi0yLjg2NS0zLjE0LTIuODU4SC42MzZjLS4zMTUgMC0uNTcuMjMzLS41Ny41MTh6bTE1LjU1OCAyLjc0bDQuNi0zLjA4NmMuMzk5LS4zMDQuNzA4LS4yMjguNzA4LjMyMnY5LjQxMmMwIC42MjYtLjM3OC41NS0uNzA4LjMyMmwtNC42LTMuMDh2LTMuODl6IiBmaWxsPSIjZmZmIi8+PC9zdmc+Cg==)
+}
+
+.meeting-info__title {
+    color: #bff0ff
+}
+
+.meeting-info__value {
+    color: #fff;
+    font-weight: 500;
+    padding-left: 5px
+}
+
+.meeting-info__link {
+    color: inherit;
+    display: inline-flex;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    transition: color .2s ease-in-out
+}
+
+.meeting-info__link:hover {
+    color: #0e0f11
+}
+
+.contact-block__note {
+    margin-top: 10px
+}
+
+.meeting-heading {
+    margin-bottom: 30px
+}
+
+.react-calendar button {
+    cursor: pointer;
+    transition: color .2s ease-in-out
+}
+
+.react-calendar button[disabled] {
+    cursor: default
+}
+
+.react-calendar abbr,.react-calendar span {
+    font-weight: inherit;
+    -webkit-text-decoration: none;
+    text-decoration: none
+}
+
+.react-calendar__viewContainer {
+    background-color: #e6f9ff;
+    padding: 35px 10px 5px
+}
+
+.react-calendar__navigation {
+    margin-bottom: 15px;
+    text-align: right
+}
+
+.react-calendar__navigation__next2-button,.react-calendar__navigation__prev2-button {
+    display: none
+}
+
+.react-calendar__navigation__arrow {
+    border: none;
+    color: #fff;
+    font-family: Prompt,Montserrat,sans-serif;
+    font-size: 26px;
+    line-height: 1;
+    padding: 0 10px;
+    vertical-align: middle
+}
+
+.react-calendar__navigation__arrow:hover {
+    color: #0e0f11
+}
+
+.react-calendar__navigation__arrow[disabled] {
+    color: #bff0ff
+}
+
+.react-calendar__navigation__label {
+    border: none;
+    color: #fff;
+    font-family: Prompt,Montserrat,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4285714286;
+    padding: 0 5px;
+    vertical-align: middle
+}
+
+.react-calendar__month-view__weekdays {
+    padding: 0 0 10px
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    color: #00c2ff;
+    font-family: Prompt,Montserrat,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667;
+    text-align: center
+}
+
+.react-calendar__tile {
+    border: none;
+    font-family: Prompt,Montserrat,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4285714286;
+    padding: 10px
+}
+
+.react-calendar__tile:hover {
+    color: #00c2ff
+}
+
+.react-calendar__tile[disabled] {
+    color: #838d95
+}
+
+.react-calendar__tile--now {
+    color: #fff;
+    overflow: visible!important;
+    position: relative
+}
+
+.react-calendar__tile--now:before {
+    background-color: #00c2ff;
+    border-radius: 27px;
+    bottom: 0;
+    content: "";
+    left: -5px;
+    opacity: 1;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    transition: opacity .2s ease,background-color .2s ease
+}
+
+.react-calendar__tile--now:hover {
+    color: #fff
+}
+
+.react-calendar__tile--now:hover:before {
+    opacity: .3
+}
+
+.react-calendar__tile--now abbr {
+    position: relative
+}
+
+.contact-block__decoration-container {
+    bottom: 0;
+    display: none;
+    height: 550px;
+    left: calc(50% - 540px);
+    line-height: 0;
+    position: absolute;
+    transform: translate(-25%,22%);
+    width: 550px
+}
+
+@media(min-width: 1024px) {
+    .contact-block__decoration-container {
+        display:block
+    }
+}
+
+.contact-block__decoration-container .contact-block__decoration-svg {
+    height: 550px;
+    width: 550px
+}
+
+.contact-block__decoration-container path {
+    fill: #80e0ff
+}
+
+.contact-block__decoration-image {
+    height: auto;
+    max-width: 100%
+}
+
+.meeting-heading--main br {
+    display: none
+}
+
+@media(min-width: 1024px) {
+    .meeting-heading--main {
+        margin-bottom:100px;
+        margin-left: 0;
+        max-width: 100%
+    }
+
+    .meeting-heading--main br {
+        display: inline
+    }
+}
+
+.contact-block__item-coll--image {
+    display: none
+}
+
+@media(min-width: 1024px) {
+    .contact-block__item-coll--image {
+        align-items:flex-end;
+        display: flex
+    }
+
+    .contact-block--vertical .contact-block__item-inner {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+    }
+}
+
+.contact-block--vertical .contact-block__item--form {
+    position: relative
+}
+
+@media(min-width: 1024px) {
+    .contact-block--vertical .contact-block__item--form {
+        background-color:#fff;
+        padding: 0;
+        width: 100%
+    }
+
+    .contact-block--vertical .contact-block__item--form .contact-block__item-coll:first-child {
+        padding: 70px 0 100px
+    }
+
+    .contact-block--vertical .contact-block__item--form .contact-block__item-coll:nth-child(odd) {
+        width: 60%
+    }
+
+    .contact-block--vertical .contact-block__item--form .contact-block__item-coll:nth-child(2n) {
+        width: 40%
+    }
+}
+
+.contact-block--vertical .contact-block__item--meeting {
+    position: relative
+}
+
+@media(min-width: 1024px) {
+    .contact-block--vertical .contact-block__item--meeting {
+        padding:100px 0 70px;
+        width: 100%
+    }
+}
+
+.contact-block--vertical .contact-block__grid-separator {
+    z-index: 10
+}
+
+@media(min-width: 1024px) {
+    .contact-block--vertical .contact-block__grid-separator {
+        background-color:#bff0ff;
+        font-family: Prompt,Montserrat,sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.3636363636;
+        max-width: 750px;
+        padding: 10px 30px;
+        text-align: center;
+        top: 0;
+        width: 50%
+    }
+}
+
+@media(min-width: 1024px)and (min-width:1024px) {
+    .contact-block--vertical .contact-block__grid-separator {
+        font-size:32px;
+        line-height: 1.25
+    }
+}
+
+@media(min-width: 1024px) {
+    .contact-block--vertical .contact-block__calendar,.contact-block--vertical .meeting-heading {
+        margin-left:30px;
+        max-width: 520px
+    }
+
+    .contact-block--vertical .contact-block__wysiwyg {
+        max-width: 720px
+    }
+
+    .contact-block--vertical .contact-block__form-wrap {
+        max-width: 520px
+    }
+}
+
+.contact-block--vertical .hs-submit input[type=submit] {
+    width: 100%
+}
+
+.contact-block--vertical .react-calendar__tile {
+    padding: 15px 10px
+}
+
+@media(min-width: 1024px) {
+    .contact-block--vertical .contact-block__item-coll {
+        width:50%;
+        z-index: 1
+    }
+
+    .contact-block--horizontal .ai-container,.contact-block--horizontal .ai-container-m {
+        max-width: none
+    }
+}
+.contact-block__item{background-color: #bff0ff;}
+.contact-block__item--meeting {
+    background-color: #00c2ff;
+}
+.contact-block__form-wrap ul li{
+margin-bottom:20px;
+}
+.contact-block__wysiwyg p.pfs2,
+.contact-block__wysiwyg p.pfs3{
+    margin-left:0;
+}
+.contact-block__form-wrap ul li span{
+    color: #0109b5;
+    display: block;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.hs-button {
+    background-color: #00c2ff;
+    border: none;
+    border-radius: 45px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 100%;
+    padding: 14px 45px;
+    position: relative;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    transition: background-color .2s ease-in-out
+}
+.ui-datepicker{
+    background: #e6f9ff;
+    border: none;
+    width: 100%;
+}
+.ui-datepicker .ui-datepicker-header{
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+}
+.ui-datepicker th{
+    color: #00c2ff;
+    font-weight: 500;
+}
+.ui-datepicker td span, .ui-datepicker td a{
+    background: none !important;
+    border: none !important;
+    font-weight: 500;
+    margin: 5px 0;
+    text-align: center;
+}
+.ui-datepicker .ui-datepicker-next-hover
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+    background: none !important;
+    border: none !important;
+}
+
+.contact-block__form-wrap input[type="text"],
+.contact-block__form-wrap input[type="email"],
+.contact-block__form-wrap textarea {
+    width: 100%;
+  
+    padding: 10px 12px; /* Padding inside the input boxes */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+.contact-block__form-wrap textarea{
+  height: 100px !important;
+}
+
+.contact-block__form-wrap input[type="text"]:focus,
+.contact-block__form-wrap input[type="email"]:focus,
+.contact-block__form-wrap textarea:focus {
+    border-color: #00aaff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5); /* Subtle blue glow */
+}
+
+.contact-block__form-wrap textarea {
+    resize: vertical; /* Allow vertical resize only */
+    height: 100px; /* Set a default height */
+}
+
+
+
+.features-wrapper-box .features-wrapper .feature-box .content ul {
+  list-style-type: disc; /* This adds bullet points */
+  margin-left: 20px; /* Adds spacing before the bullet points */
+  color: gray; /* Sets the bullet points and text color to white */
+ 
+}
+
+.features-wrapper-box .features-wrapper .feature-box .content ul li {
+  margin-bottom: 10px; /* Adds space between each list item */
+}
+
+
+
+
+   </style>
+    
+   
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div id="container" class="container-preloader">
+        <div class="animation-preloader">
+          <div class="spinner"></div>
+          <div class="txt-loading">
+            <span data-text="K" class="characters">K</span>
+            <span data-text="A" class="characters">A</span>
+            <span data-text="R" class="characters">R</span>
+            <span data-text="M" class="characters">M</span>
+            <span data-text="A" class="characters">A</span>
+            <span data-text="D" class="characters">D</span>
+            <span data-text="E" class="characters">E</span>
+            <span data-text="V" class="characters">V</span>
+          </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    </div>
+
+    <!-- Cursor Animation -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+
+    <!-- Switcher Area Start -->
+    <div class="switcher__area">
+      <div class="switcher__icon">
+        <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+        <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="switcher__items">
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Language Support</p>
+          </div>
+          <div class="switcher__btn lang_dir wc-col-2">
+            <button class="active" data-mode="ltr">LTR</button>
+            <button data-mode="rtl">RTL</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Layout</p>
+          </div>
+          <div class="switcher__btn layout-type wc-col-2">
+            <button class="active" data-mode="full-width">Full Width</button>
+            <button data-mode="box-layout">Box Layout</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Cursor</p>
+          </div>
+          <div class="switcher__btn">
+            <select name="cursor-style" id="cursor_style">
+              <option value="1">default</option>
+              <option selected value="2">animated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Switcher Area End -->
+
+    <!-- offcanvas start  -->
+    <div class="offcanvas-area">
+      <div class="offcanvas-area-meta-wrapper">
+        <span id="close_offcanvas" class="close-offcanvas">
+          <img src="assets/imgs/icon/close.png" alt="close" />
+        </span>
+        <div class="offcanvas-btn-wrapper">
+          <a
+            target="_blank"
+            href="https://themeforest.net/item/axtra-digital-agency-creative-portfolio-theme/43074408"
+            class="wc-btn wc-btn-default btn-hover-cropping"
+            >Purchase now</a
+          >
+        </div>
+      </div>
+      <div class="offcanvas-area-menu-wrapper">
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link">
+              Home
+              <img
+                class="angle-down"
+                src="assets/imgs/icon/angle-down.png"
+                alt="icon image"
+              />
+            </div>
+            <ul class="submenu">
+              <li><a href="ai-content-writer.html">AI Content Writer</a></li>
+              <li><a href="ai-image-generator.html">AI Image Generator</a></li>
+              <li><a href="ai-chatbot.html">AI Chatbot</a></li>
+              <li><a href="ai-seo.html">AI SEO Software</a></li>
+              <li><a href="ai-software.html">AI Startups</a></li>
+              <li><a href="ai-video-editor.html">AI Video Editor</a></li>
+              <li><a href="booking.html">Booking Software</a></li>
+              <li><a href="online-meeting.html">Virtual Meeting</a></li>
+              <li><a href="crm.html">CRM Software</a></li>
+              <li><a href="customer-service.html">Customer Support</a></li>
+              <li><a href="mobile-apps.html">Mobile App / SASS</a></li>
+              <li>
+                <a href="marketing-automation.html" class="active-page"
+                  >Marketing automation</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <div class="link">
+              Pages<img
+                class="angle-down"
+                src="assets/imgs/icon/angle-down.png"
+                alt="icon image"
+              />
+            </div>
+            <ul class="submenu">
+              <li><a href="integration.html">integration</a></li>
+              <li><a href="integration-single.html">integration single</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+              <li><a href="404.html">404</a></li>
+              <li><a href="pricing.html">pricing</a></li>
+              <li><a href="faq.html">faq</a></li>
+              <li><a href="all-template.html">video templete</a></li>
+              <li><a href="team.html">team page</a></li>
+              <li><a href="privacy-policy.html">privacy policy</a></li>
+            </ul>
+          </li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="faq.html">FaQ</a></li>
+          <li>
+            <div class="link">
+              Blog<img
+                class="angle-down"
+                src="assets/imgs/icon/angle-down.png"
+                alt="icon image"
+              />
+            </div>
+            <ul class="submenu">
+              <li><a href="blog.html">Our Blog</a></li>
+              <li><a href="blog-details.html">Blog Details</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- offcanvas end  -->
+
+    <!-- search modal start -->
+    <div
+      class="modal fade"
+      id="search-template"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="search-template"
+      aria-hidden="true"
+    >
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form action="#" class="form-search">
+              <input type="text" placeholder="Search" />
+              <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search modal end -->
+
+    <!-- Header area start -->
+    <header class="header-area style-1 pos-abs zi-9">
+      <div class="header-area__inner">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/imgs/logo/karmadev-logo.png" class="normal-logo" alt="Site Logo">
+            <img src="assets/imgs/logo/karmadev-logo.png" class="sticky-logo" alt="Site Logo">
+          </a>
+        </div>
+        <div class="header__nav">
+          <nav class="main-menu">
+            <ul>
+              <li class="menu-item-has-children">
+                <a href="index.html">home</a>
+                <ul class="dp-menu">
+                  <li>
+                    <a href="ai-content-writer.html">AI Content Writer</a>
+                  </li>
+                  <li>
+                    <a href="ai-image-generator.html">AI Image Generator</a>
+                  </li>
+                  <li><a href="ai-chatbot.html">AI Chatbot</a></li>
+                  <li><a href="ai-seo.html">AI SEO Software</a></li>
+                  <li><a href="ai-software.html">AI Startups</a></li>
+                  <li><a href="ai-video-editor.html">AI Video Editor</a></li>
+                  <li><a href="booking.html">Booking Software</a></li>
+                  <li><a href="online-meeting.html">Virtual Meeting</a></li>
+                  <li><a href="crm.html">CRM Software</a></li>
+                  <li><a href="customer-service.html">Customer Support</a></li>
+                  <li><a href="mobile-apps.html">Mobile App / SASS</a></li>
+                  <li>
+                    <a href="marketing-automation.html" class="active-page"
+                      >Marketing automation</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="about.html">about</a></li>
+              <li class="menu-item-has-children">
+                <a href="#">Pages</a>
+                <ul class="dp-menu">
+                  <li><a href="integration.html">integration</a></li>
+                  <li>
+                    <a href="integration-single.html">integration single</a>
+                  </li>
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="contact.html">contact</a></li>
+                  <li><a href="404.html">404</a></li>
+                  <li><a href="pricing.html">pricing</a></li>
+                  <li><a href="faq.html">faq</a></li>
+                  <li><a href="all-template.html">video templete</a></li>
+                  <li><a href="team.html">team page</a></li>
+                  <li><a href="privacy-policy.html">privacy policy</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">blog</a>
+                <ul class="dp-menu">
+                  <li><a href="blog.html">blog</a></li>
+                  <li><a href="blog-details.html">blog details</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__button">
+          <a
+            href="javascript:void(0)"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            >Login</a
+          >
+          <a
+            href="javascript:void(0)"
+            class="wc-btn-primary btn-text-flip"
+            data-bs-toggle="modal"
+            data-bs-target="#signupform"
+          >
+            <span data-text="Sign up">Let’s Talk</span></a
+          >
+        </div>
+        <div class="header__navicon d-xl-none">
+          <button onclick="showCanvas3()" class="open-offcanvas">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <div class="body-wrapper marketing-automation">
+          <!-- overlay switcher close  -->
+          <div class="overlay-switcher-close"></div>
+
+          <main>
+            <section class="intro-area">
+              <img
+                src="assets/imgs/gallery/img-r-74.webp"
+                class="pos-abs shape-1"
+                alt=""
+              />
+              <img
+                src="assets/imgs/gallery/img-r-75.webp"
+                class="pos-abs shape-2"
+                alt=""
+              />
+              <div class="shape-design pos-abs shape-3">
+                <img src="assets/imgs/gallery/img-r-44.webp" alt="shape" />
+              </div>
+              <div class="shape-design pos-abs shape-4 wc-y-anim">
+                <img src="assets/imgs/gallery/img-r-45.webp" alt="shape" />
+              </div>
+              <div class="shape-design pos-abs shape-5">
+                <img src="assets/imgs/gallery/img-r-49.webp" alt="shape" />
+              </div>
+              <div class="shape-design pos-abs shape-6">
+                <img src="assets/imgs/gallery/img-r-45.webp" alt="shape" />
+              </div>
+              <img
+                src="assets/imgs/gallery/img-r-78.webp"
+                class="pos-abs shape-7 wc-y-anim"
+                alt="shape"
+              />
+              <img
+                src="assets/imgs/gallery/img-r-79.webp"
+                class="pos-abs shape-8"
+                alt="shape"
+              />
+              <img
+                src="assets/imgs/gallery/img-r-80.webp"
+                class="pos-abs shape-9 wc-y-anim"
+                alt="shape"
+              />
+              <img
+                src="assets/imgs/gallery/img-r-81.webp"
+                class="pos-abs shape-10"
+                alt="shape"
+              />
+              <img
+                src="assets/imgs/shape/shape-r-30.webp"
+                class="pos-abs shape-11"
+                alt="shape"
+              />
+              <img
+                src="assets/imgs/shape/shape-r-31.webp"
+                class="pos-abs shape-12"
+                alt="shape"
+              />
+
+              <div class="container">
+                <div class="intro-inner">
+                  <h1 class="subtitle has_fade_anim">
+                    Trusted Web Development Partner
+
+                  </h1>
+                  <div class="title-wrapper">
+                    <h2 class="intro-title has_fade_anim" data-delay="0.25">
+                      Web Development
+                      <span> Company</span>
+                    </h2>
+                  </div>
+                  <p class="text has_fade_anim" data-delay="0.35">
+                    Crafting stunning, high-performance websites that boosts your online presence
+
+                  </p>
+                  <form action="#" class="has_fade_anim" data-delay="0.45">
+                    <div class="search-wrap">
+                      <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Type your email"
+                      />
+                      <button type="submit" class="wc-btn-primary">
+                        Get Your Quote
+                      </button>
+                    </div>
+                  </form>
+                  <ul class="search-list-msg has_fade_anim" data-delay="0.55">
+                    <li>
+                      <img
+                        src="assets/imgs/gallery/img-r-77.webp"
+                        alt="check-icon"
+                      />
+                      No credit card required
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <div
+              class="dashboard-area has_fade_anim"
+              data-delay="0.65"
+              data-on-scroll="0"
+            >
+              <div class="container">
+                <div class="intro-thumb">
+                  <div class="intro-thumb-inner">
+                    <div class="thumb-content">
+                      <div class="img">
+                        <img src="assets/imgs/gallery/img-r-93.png" alt="" />
+                      </div>
+                      <h2 class="thumb-title">
+                        Full-potential marketing service
+                      </h2>
+                      <div class="list-item-wrap">
+                        <div class="list-items">
+                          <div class="counter">
+                            <span>01</span>
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Search Optimization</h3>
+                            <p class="text">Track your optimization and more</p>
+                          </div>
+                        </div>
+                        <div class="list-items">
+                          <div class="counter">
+                            <span>02</span>
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Social Automation</h3>
+                            <p class="text">Track your optimization and more</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb-video">
+                      <img src="assets/video/dashboard.gif" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="brand-area has_fade_anim scroll">
+              <div class="container">
+                <div class="text-wrapper">
+                  <p class="text">
+                    KarmaDev trusted by the great company
+                  </p>
+                </div>
+                <div class="brand-logos">
+                  <div class="swiper brand-active">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="logo">
+                          <img
+                            src="assets/imgs/brand/img-r-4.webp"
+                            alt="logo"
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="logo">
+                          <img
+                            src="assets/imgs/brand/img-r-5.webp"
+                            alt="logo"
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="logo">
+                          <img
+                            src="assets/imgs/brand/img-r-6.webp"
+                            alt="logo"
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="logo">
+                          <img
+                            src="assets/imgs/brand/img-r-3.webp"
+                            alt="logo"
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="logo">
+                          <img
+                            src="assets/imgs/brand/img-r-2.webp"
+                            alt="logo"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="faq-area section-spacing">
+              <div class="container">
+                <div class="faq-inner">
+                  <div class="faq-content">
+                    <div class="section-heading">
+                      <div class="section-title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Modern Website Development
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="faq-wrapper">
+                      <div class="accordion-wrapper has_fade_anim">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseOne"
+                              >
+                                Frontend Development
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseOne"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingOne"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                Our web development company combines extensive knowledge of leading frameworks with skill in creating flawless designs, ensuring excellent user experiences. Develop a standout application that works seamlessly on any desktop device.
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseTwo"
+                              >
+                                Backend Development
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseTwo"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingTwo"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                Create a robust foundation for your custom web applications, including API integration and business processes.
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseThree"
+                              >
+                                UX/UI Design
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseThree"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingThree"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                Product design is a detailed, multi-step process that combines engineering, management, and graphic design. It gives a clear picture of how the final product will look and feel. Additionally, it outlines the tasks the product will perform and the tools it will use.
+                              </div>
+                            </div>
+                          </div>
+            
+                          <!-- Add unique IDs for the next set of accordion items -->
+            
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFour"
+                              >
+                              MVP Development 
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseFour"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingFour"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                Find your ideal product-market fit affordably. Test your concept before investing heavily in developing the full product. Team up with KarmaDev.in , a top-tier MVP development company helping startups achieve success since 2020
+
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFive"
+                              >
+                              Testing
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseFive"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingFive"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                Perform different tests, including load testing, and fix any issues. Our thorough quality management process includes various tests to make sure we deliver high-quality software
+
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSix">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseSix"
+                              >
+                              Maintenance & Support
+
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseSix"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingSix"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body">
+                                After launching the product, our web development company will keep supporting you by regularly updating features, providing service support, and continuously monitoring and fixing issues to ensure everything runs smoothly
+
+                              </div>
+                            </div>
+                          </div>
+            
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-thumb">
+                    <div class="thumb-1">
+                      <img src="assets/imgs/gallery/img-r-57.webp" alt="faq-thumb" />
+                    </div>
+                    <div class="thumb-2">
+                      <img
+                        src="assets/imgs/gallery/img-r-57-small.webp"
+                        data-speed="0.8"
+                        alt="faq-thumb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+
+            <section class="notify-area section-spacing">
+              <div class="container1">
+                <div class="section-heading">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title has_fade_anim">
+                      Having trouble picking a service? 
+                    </h2>
+                  </div>
+                  <div class="text-wrapper">
+                    <p class="text has_fade_anim">
+                      Reach out to us, and we'll assist you in finding the best fit for your needs.
+
+                    </p>
+                  </div>
+                </div>
+                <div class="form-wrapper has_fade_anim">
+                  <form action="#">
+                    <img src="assets/imgs/icon/email.webp" alt="icon" />
+                    <input type="text" placeholder="Enter your email" />
+                    <button type="submit" class="wc-btn-primary">
+                      Sign up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+           
+            <section class="features-area section-spacing pb-0" > 
+              <div class="container">
+                <div class="features-area-inner">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Why Our Web Development Services is Best
+
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim">
+                        We prioritize transparent communication and rigorous testing to provide web solutions that are reliable, user-friendly, and tailored to your needs
+
+                      </p>
+                    </div>
+                  </div>
+                  <div class="features-wrapper-box">
+                    <div class="features-wrapper">
+                      <a href="about.html">
+                        <div class="feature-box has_fade_anim">
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-21.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              Reliable and Skilled Professionals
+
+                            </h3>
+                            <p class="text">
+                              Your project will be handled by experienced and trustworthy middle and senior web development experts from our custom web development company
+
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.25"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-22.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              Expert Guidance on Web Development
+                            </h3>
+                            <p class="text">
+                              Our business analysts and developers will guide you on the best changes and solutions, drawing from their extensive expertise.
+
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.35"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-23.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              International Experience and Reputation
+
+                            </h3>
+                            <p class="text">
+                              With clients in countries, we are proud to invite you to visit our offices in Coimbatore
+
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="features-wrapper-box">
+                    <div class="features-wrapper">
+                      <a href="about.html">
+                        <div class="feature-box has_fade_anim">
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-21.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              Commitment to Customer Satisfaction
+
+                            </h3>
+                            <p class="text">
+                              We go beyond merely fulfilling orders by focusing on achieving the best outcomes for your project. Our full-stack team consistently aims to exceed client expectations.
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.25"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-22.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              On-Time Project Delivery
+                            </h3>
+                            <p class="text">
+                              A dedicated project manager, account manager, and team of web design and development specialists ensure your project is completed within budget and on schedule
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.35"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-23.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              Clear and Open Collaboration
+
+                            </h3>
+                            <p class="text">
+                              Using Agile methodology and Scrum practices, we ensure that collaboration and progress tracking are as transparent as possible for our custom web development services 
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+                  <div class="features-wrapper-box" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+                    <div class="features-wrapper" style="width:390px">
+                      <a href="about.html">
+                        <div class="feature-box has_fade_anim">
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-21.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">
+                              Emphasis on Quality Testing
+
+
+                            </h3>
+                            <p class="text">
+                              We allocate significant time to testing to ensure your web solution is bug-free, functions perfectly, is user-friendly, and meets all the needs of your target audience
+
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-normal"
+                              >Learn more<i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                    
+
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </section>
+
+            <section class="features-area section-spacing">
+              <div class="container">
+                <div class="features-area-inner">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Modern solution for team collaboration
+                        </h2>
+                      </div>
+                    </div>
+                    <!-- <div class="text-wrapper">
+                      <p class="text has_fade_anim">
+                        Ability to understand and generate content in different languages to expand reach and appeal to a wider audience. Various custom sync to any marketing channel.
+                      </p>
+                    </div> -->
+                  </div>
+                  <div class="section-content">
+                    <div class="accordion-wrapper has_fade_anim">
+                      <div class="accordion accordion-flush" id="accordionExample">
+                        <!-- Pre-discovery Phase -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Pre-discovery Phase
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul>
+                                <li>Review of relevant laws and regulations</li>
+                                <li>Evaluation of user feedback and problems with current service</li>
+                                <li>Measurement of service performance</li>
+                                <li>Coordination among team members</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- Discovery Phase -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Discovery Phase
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul>
+                                <li>Design the app's structure</li>
+                                <li><span>Define technical details:</span> Specifications for the system architecture</li>
+                                <li><span>Outline business processes and workflows:</span> Map out each step clearly</li>
+                                <li><span>Assign tasks to the team and plan deployment:</span> Detailed work breakdown structure</li>
+                                <li><span>Specify software requirements:</span> Requirements documentation</li>
+                                <li><span>Create a detailed design plan and assess efficiency using PERT analysis:</span> Efficiency measurement</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- Design Phase -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Design Phase
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul>
+                                <li>Presenting different construction options</li>
+                                <li>Selecting tools and technologies</li>
+                                <li>Creating a proof of concept</li>
+                                <li>Estimating the project cost</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- Delivery Phase -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Delivery Phase
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul>
+                                <li><span>Prototyping:</span> Quick, Progressive, Gradual, and Intense</li>
+                                <li><span>Minimum Viable Product:</span> The most basic version of the product that still offers value</li>
+                                <li><span>Mobile App Testing:</span></li>
+                                <ul>
+                                  <li><span>Unit Testing:</span> Checking individual components</li>
+                                  <li><span>Integration Testing:</span> Ensuring different parts work together</li>
+                                  <li><span>Automation Testing:</span> Using tools to run tests automatically</li>
+                                  <li><span>Penetration Testing:</span> Identifying security vulnerabilities</li>
+                                </ul>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- Launch and Deployment -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              Launch and Deployment
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul>
+                                <li>Tools and materials</li>
+                                <li>In-depth product guides (including videos and written materials)</li>
+                                <li>A current product website</li>
+                                <li>Ongoing enhancements</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                      </div>
+                    </div>
+                    <div class="feature-thumb has_fade_anim">
+                      <img src="assets/imgs/gallery/img-s-10.webp" alt="feature image"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            
+
+            <section class="cta-area">
+              <div class="container">
+                <div class="cta-area-inner section-spacing pb-0">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="subtitle-wrapper">
+                        <span class="section-subtitle has_fade_anim"
+                          >Call to action</span
+                        >
+                      </div>
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Get a skilled team to create and build your web application
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim">
+                        We'll deliver it on time and within budget, with an agile approach and a product that's free of crashes
+
+                      </p>
+                    </div>
+                    <div class="btn-wrapper has_fade_anim">
+                      <a
+                        href="contact.html"
+                        class="wc-btn wc-btn-primary btn-text-flip"
+                      >
+                        <span data-text="Signup now"> Call Our Team </span></a
+                      >
+                      <a
+                        href="contact.html"
+                        class="wc-btn wc-btn-primary btn-text-flip primary-bg"
+                      >
+                        <span data-text="Request for demo"
+                          >Request for demo</span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="testimonial-area section-spacing pb-0">
+              <div class="container">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">What the users say</h2>
+                    </div>
+                  </div>
+                  <div class="text-wrapper">
+                    <p class="text has_fade_anim">Leave pen-and-paper bookings in the past allowing you to focus more on your business
+                      or simply enjoy your newfound free time.</p>
+                  </div>
+                </div>
+                <div class="testimonial-wrapper-box">
+                  <div class="testimonial-wrapper has_fade_anim">
+                    <div class="testimonial-items fix">
+                      <div class="swiper testimonial-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="testimonial-item has-border">
+                              <div class="content">
+                                <div class="text-wrapper">
+                                  <div class="quote-icon-wrap">
+                                    <img src="assets/imgs/icon/quote-3.webp" alt="Quote Icon" class="quote-icon">
+                                  </div>
+                                  <p class="text">We’ve had good experiences with call centers through binox. We hired my
+                                    own remote team that I have complete control over the remote team that means work from
+                                    home at anywhere</p>
+                                </div>
+                                <div class="meta-info">
+                                  <div class="meta-data">
+                                    <p class="name">Mark Henry</p>
+                                    <p class="post">Developer, Oklavery</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="testimonial-item has-border">
+                              <div class="content">
+                                <div class="text-wrapper">
+                                  <div class="quote-icon-wrap">
+                                    <img src="assets/imgs/icon/quote-3.webp" alt="Quote Icon" class="quote-icon">
+                                  </div>
+                                  <p class="text">Sassly AI for managing every stage of funding and selling. It’s
+                                    increased
+                                    our team’s efficiency and our ability to oversee transactions with automation. So we
+                                    need more services.</p>
+                                </div>
+                                <div class="meta-info">
+                                  <div class="meta-data">
+                                    <p class="name">Janathan Deo</p>
+                                    <p class="post">Developer, Oklavery</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="testimonial-item has-border">
+                              <div class="content">
+                                <div class="text-wrapper">
+                                  <div class="quote-icon-wrap">
+                                    <img src="assets/imgs/icon/quote-3.webp" alt="Quote Icon" class="quote-icon">
+                                  </div>
+                                  <p class="text">We’ve had good experiences with call centers through binox. We hired my
+                                    own remote team that I have complete control over the remote team that means work from
+                                    home at anywhere</p>
+                                </div>
+                                <div class="meta-info">
+                                  <div class="meta-data">
+                                    <p class="name">Mark Henry</p>
+                                    <p class="post">Developer, Oklavery</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="testimonial-item has-border">
+                              <div class="content">
+                                <div class="text-wrapper">
+                                  <div class="quote-icon-wrap">
+                                    <img src="assets/imgs/icon/quote-3.webp" alt="Quote Icon" class="quote-icon">
+                                  </div>
+                                  <p class="text">Sassly AI for managing every stage of funding and selling. It’s
+                                    increased
+                                    our team’s efficiency and our ability to oversee transactions with automation. So we
+                                    need more services.</p>
+                                </div>
+                                <div class="meta-info">
+                                  <div class="meta-data">
+                                    <p class="name">Janathan Deo</p>
+                                    <p class="post">Developer, Oklavery</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="testimonial-rating">
+                    <p class="rating-subtitle">Average Rating</p>
+                    <h2 class="rating-title">4.9</h2>
+                    <div class="star-icons">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="disc">(30+) Customer <br> reviews</p>
+                    <div class="divide-border"></div>
+                    <div class="testimonial-nav">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="features-area section-spacing pb-0">
+              <div class="container">
+                <div class="features-area-inner">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">
+                          Technologies We Use for Web Development
+
+                        </h2>
+                      </div>
+                    </div>
+                    <!-- <div class="text-wrapper">
+                      <p class="text has_fade_anim">
+                        Now you can zero in on strategy and creativity – the
+                        stuff that really moves the needle for The result reads
+                        like robot-speak, damaging your brand.
+                      </p>
+                    </div> -->
+                  </div>
+                  <div class="features-wrapper-box">
+                    <div class="features-wrapper">
+                      <a href="about.html">
+                        <div class="feature-box has_fade_anim">
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-24.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Front-end</h3>
+                            <p class="text">
+                             <ul>
+                              <li> ReactJS
+                              </li>
+                              <li>AngularJS</li>
+                             </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.25"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-25.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Backend</h3>
+                            <p class="text">
+                             <ul>
+                              <li>NodeJS
+                              </li>
+                              <li> Python</li>
+                              <li>GoLang</li>
+                              <li> Firebase</li>
+                              <li> Java</li>
+                             </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.35"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-26.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Mobile Development
+                            </h3>
+                            <p class="text">
+                            <ul>
+                              <li> React Native 
+                              </li>
+                              <li>Flutter</li>
+                             
+                            </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                     
+                    </div>
+                  </div>
+
+                  <div class="features-wrapper-box">
+                    <div class="features-wrapper">
+                      <a href="about.html">
+                        <div class="feature-box has_fade_anim">
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-24.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">UX/UI Design</h3>
+                            <p class="text">
+                             <ul>
+                              <li> Figma 
+                              </li>
+                              <li>Miro</li>
+                              <li>InVision</li>
+                              <li>Photoshop</li>
+                             </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.25"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-25.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">Cloud Services</h3>
+                            <p class="text">
+                             <ul>
+                              <li>Amazon Web Services
+                              </li>
+                              <li> Google Cloud Platform</li>
+                              <li>Microsoft Azure</li>
+                              <li> Digital Ocean</li>
+                              <li> Hetzner</li>
+                             </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="about.html">
+                        <div
+                          class="feature-box has_fade_anim"
+                          data-delay="0.35"
+                        >
+                          <div class="thumb">
+                            <img
+                              src="assets/imgs/icon/icon-s-26.webp"
+                              alt="feature icon"
+                            />
+                          </div>
+                          <div class="content">
+                            <h3 class="title">CI/CD 
+                            </h3>
+                            <p class="text">
+                            <ul>
+                              <li> GitLab CI 
+                              </li>
+                              <li>Jenkins CI</li>
+                              <li>GitHub Actions</li>
+                              <li>CircleCI</li>
+                            </ul>
+                            </p>
+                            <span href="about.html" class="wc-btn wc-btn-icon"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="contact-block contact-block--horizontal js-hubspot-form-section ai-section section--indents-large">
+              <div class="ai-section__inner">
+                <div class="contact-block__grid">
+          
+                            <div class="contact-block__item contact-block__item--meeting">
+                      <span class="contact-block__grid-separator pfs7">or</span>
+                      <div class="ai-container-m">
+                        <div class="contact-block__item-inner">
+                          
+                          <div class="contact-block__item-coll">
+                            <div class="meeting-heading mb-last-0">
+                                                    <h4 class="meeting-title pfs3 mb-last-0">Book a meeting</h4>
+                                                                        <p class="meeting-info meeting-info--phone pfs8 mb-last-0">
+                                  <span class="meeting-info__title">
+                                    Call (Toll-Free*)</span>
+                                  <span class="meeting-info__value">
+                                    <a href=" +91 8680818100"
+                                       class="meeting-info__link"> +91 8680818100</a>
+                                  </span>
+                                </p>
+                                                                        <p class="meeting-info meeting-info--email pfs8 mb-last-0">
+                                  <span class="meeting-info__title">Email</span>
+                                  <span class="meeting-info__value">
+                                    <a href="mailto:hello@karmadev.in" class="meeting-info__link">
+                                      hello@karmadev.in                      </a>
+                                  </span>
+                                </p>
+                                                                        <p class="meeting-info meeting-info--zoom pfs8 mb-last-0">
+                                  <span class="meeting-info__title">Zoom</span>
+                                  <span class="meeting-info__value">30 min</span>
+                                </p>
+                                                </div>
+          <!-- Calendar Start-->
+                                                <div class="contact-block__calendar">
+                                <div class="calendar-container js-calendar"></div>
+                                <div class="datepicker"></div>
+                                <p class="contact-block__note pfs8">
+                                  * US and Canada, exceptions apply                      </p>
+                              </div>
+                              <!--Calendar End -->
+                                            </div>
+                        </div>
+          
+                      </div>
+                    </div>
+                  
+                            <div class="contact-block__item contact-block__item--form">
+                      <div class="ai-container-m">
+                        <div class="contact-block__item-inner">
+          
+                          <div class="contact-block__item-coll">
+                                                <div class="contact-block__wysiwyg wysiwyg mb-last-0"><p class="pfs3">Ready to innovate your business?</p>
+          <p class="pfs2">We are! Let’s kick-off our journey to success!</p>
+          </div>
+                                                                  <div class="contact-block__form-wrap">
+                                                                      <ul>
+                                                                          <li><input type="text" placeholder="Full name" /></li>
+                                                                          <li><input type="email" placeholder="Email address" required /><span>Please complete this required field</span></li>
+                                                                          <li><textarea>Message*</textarea></li>
+                                                                          <li><input type="checkbox" id="agree" /> <label for="agree">Yes, I have read and agree to the <a href="#">Data Privacy</a> and <a href="#"> Legal Notice.*</a></label> </li>
+                                                                          <li><input type="submit" value="Send" class="hs-button" /></li>
+                                                                      </ul>
+                                                                  </div>
+                                            </div>
+          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+            </section>
+
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/offcanvas.js"></script>
+
+    <script>
+      // testimonial slider
+      
+      if ('.testimonial-slider') {
+      var testimonial_style_3 = new Swiper(".testimonial-slider", {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          // when window width is >= 1366px
+          1366: {
+            slidesPerView: 2,
+          },
+        }
+      });
+    }
+
+
+      const toggle_switcher = function ($scope) {
+        const checked = $("input", $scope);
+        const toggle_pane = $(".toggle-pane", $scope);
+        const toggle_label = $(".before_label, .after_label", $scope);
+
+        checked.change(function () {
+          toggle_pane.toggleClass("show");
+          toggle_label.toggleClass("active");
+        });
+      };
+
+      // corporate_brand_slider_active
+      if (".brand-active") {
+        var brand_slider_active = new Swiper(".brand-active", {
+          slidesPerView: 5,
+          loop: true,
+          autoplay: true,
+          spaceBetween: 60,
+          speed: 3000,
+          autoplay: {
+            delay: 0.1,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            // when window width is >= 320px
+            375: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            // when window width is >= 1366px
+            1366: {
+              slidesPerView: 5,
+            },
+          },
+        });
+      }
+
+
+      jQuery.noConflict();
+jQuery(document).ready(function($) {
+  $( ".datepicker" ).datepicker();
+});
+    </script>
+  </body>
+</html>
